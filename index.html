@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+* { margin:0; padding:0; }
+.jscrollbar { width:400px; height:200px; margin:30px auto 0; border:4px solid #e7e7e7; position:relative; }
+.jscrollbar .content { padding:0 10px; height:100%; overflow:hidden; }
+.jscrollbar .content p { font-size:12px; line-height: 1.5em; margin:10px 0; text-indent:2em; }
+#div2 .content { height: 190px; padding:0; width:100%; }
+#div2 p { width:1000px; }
+</style>
+<script src="jscrollbar.js"></script>
+</head>
+<body>
+<div id="div1" class="jscrollbar">
+	<div class="content" id="cont1">
+		<p>术后中医专家将根据您的体质辨证施治，精心调配中药汤剂，内服调理气血，外用浴足养生，调高机体免疫力，防止手脚冰冷等月子病的产生，促进受损机体康复。</p>
+		<p>使用修复子宫的专业仪器进行专业理疗，加快子宫复旧、卵巢排卵功能恢复，避免术后宫缩不良引起的出血，减少手术后遗症。</p>
+		<p>考虑到女性在手术前6小时内无法进餐，故特为接受手术的女性在术后准备了健康营养套餐。根据人流后人体对各种营养需求的搭配，饮食包括奶类、豆类、鸡汤、蛋糕、各种粥等。还可以根据个人的饮食习惯和爱好进行特殊调配，保证了套餐既营养丰富又美味，促进身体调整和内分泌的恢复。</p>
+		<p>从三人间、二人间、单间、到VIP月子公寓豪华套房，充分满足不同需求的人流术后女性。温馨安静的环境，完善的设施，保证了术后身体和精神可以得到很好的恢复，又能更细致地对术后出现的一些身体异常状况第一时间作出反应，并提供科学的避孕指导与心理疏导，更加贴心和人性化。</p>
+		<p>人流使女性阳气虚弱，气血两亏。我院准备的暖宫贴，促进流产后子宫及血管经快恢复正常的收缩规律，能有效防止宫寒宫虚。</p>
+	</div>
+</div>
+<script>
+jScrollBar({
+	elem: document.getElementById("div1"),
+	inner: document.getElementById("cont1"),
+	dir: "v"
+});
+</script>
+
+<div id="div2" class="jscrollbar">
+	<div class="content" id="cont2">
+		<p>术后中医专家将根据您的体质辨证施治，精心调配中药汤剂，内服调理气血，外用浴足养生，调高机体免疫力，防止手脚冰冷等月子病的产生，促进受损机体康复。</p>
+		<p>使用修复子宫的专业仪器进行专业理疗，加快子宫复旧、卵巢排卵功能恢复，避免术后宫缩不良引起的出血，减少手术后遗症。</p>
+		<p>考虑到女性在手术前6小时内无法进餐，故特为接受手术的女性在术后准备了健康营养套餐。根据人流后人体对各种营养需求的搭配，饮食包括奶类、豆类、鸡汤、蛋糕、各种粥等。还可以根据个人的饮食习惯和爱好进行特殊调配，保证了套餐既营养丰富又美味，促进身体调整和内分泌的恢复。</p>
+		<p>从三人间、二人间、单间、到VIP月子公寓豪华套房，充分满足不同需求的人流术后女性。温馨安静的环境，完善的设施，保证了术后身体和精神可以得到很好的恢复，又能更细致地对术后出现的一些身体异常状况第一时间作出反应，并提供科学的避孕指导与心理疏导，更加贴心和人性化。</p>
+		<p>人流使女性阳气虚弱，气血两亏。我院准备的暖宫贴，促进流产后子宫及血管经快恢复正常的收缩规律，能有效防止宫寒宫虚。</p>
+	</div>
+</div>
+<script>
+jScrollBar({
+	elem: document.getElementById("div2"),
+	inner: document.getElementById("cont2"),
+	dir: "h",
+	barStyle: {
+		height:10,
+		bottom:0,
+		background:"#ccc"
+	},
+	sliderStyle: {
+		height:8,
+		top:1,
+		background:"#333",
+		borderRadius: 8
+	}
+});
+</script>
+</body>
+</html>
