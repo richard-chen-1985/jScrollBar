@@ -141,21 +141,21 @@ jScrollBar.prototype = {
         this.sliderBar.setCapture && this.sliderBar.setCapture();
         document.onmousemove = function (ev) {
             var ev = ev || window.event,
-                scroll, dis, size1, size2;
+                scrollDir, dis, size1, size2;
 
             if (_this.dir == "v") {
-                scroll = "scrollTop";
+                scrollDir = "scrollTop";
                 dis = ev.clientY - disY;
                 size1 = _this.scrollBar.offsetHeight - _this.sliderBar.offsetHeight;
                 size2 = _this.inner.scrollHeight - _this.inner.offsetHeight;
             } else if (_this.dir == "h") {
-                scroll = "scrollLeft";
+                scrollDir = "scrollLeft";
                 dis = ev.clientX - disX;
                 size1 = _this.scrollBar.offsetWidth - _this.sliderBar.offsetWidth;
                 size2 = _this.inner.scrollWidth - _this.inner.offsetWidth;
             }
 
-            _this.inner[scroll] = dis / size1 * size2;
+            _this.inner[scrollDir] = dis / size1 * size2;
 
             _this.preventDefault(ev);
         };
